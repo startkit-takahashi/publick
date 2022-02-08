@@ -1,0 +1,10 @@
+@use '../global/index'as global;
+@use '../setting/index'as setting;
+
+.button {
+  background: global.$main-color;
+
+  &:hover {
+    background: global.$white-color;
+  }
+}
