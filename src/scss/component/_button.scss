@@ -1,10 +1,13 @@
-@use '../global/index'as global;
-@use '../setting/index'as setting;
+@use '../base'as base;
+@use '../global'as global;
+@use '../function'as func;
+@use '../setting'as set;
 
 .button {
-  background: global.$main-color;
+  font-size: func.rem(16px);
+  background: #000;
+}
 
-  &:hover {
-    background: global.$white-color;
-  }
+.header {
+  width: func.vw(30px);
 }

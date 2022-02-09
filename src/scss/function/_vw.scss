@@ -1,0 +1,14 @@
+@use 'strip-unit'as strip;
+
+@function vw($px, $base: 375px) {
+  $value: $px;
+  $value: (strip.strip-unit($px) / strip.strip-unit($base)) * 100vw;
+
+  // 単位がpx以外の場合は警告を出してそのまま返す
+  @if (unit($px) !='px') {
+    @warn 'vw()の引数にpx以外の値を指定しても計算できません';
+    @return $value;
+  }
+
+  @return $value;
+}
