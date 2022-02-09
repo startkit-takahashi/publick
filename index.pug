@@ -5,6 +5,7 @@ head
   meta(http-equiv="X-UA-Compatible" content="IE=edge")
   meta(name="viewport" content="width=device-width, initial-scale=1.0")
   title サイトのタイトル
+  link(rel='stylesheet', href="./dist/css/style.css")
 <body>
 
 - const name = "クリエイターズファクトリー";
@@ -14,16 +15,18 @@ section.section
   h2.visually-hidden 消すタイトル
 
 section.about
-  h2.section-title ABOUT
+  h2.section-title.en-cap about
   p 参考テキスト参考テキスト参考テキスト
     br
     | 改行テキスト改行テキスト改行テキスト改行テキスト
   .button
     a(href="#") !{name}へ
 
-  ul
-    li
-      a(href="#") リスト
-    li リスト
+  nav
+    li: a(href="#")
+
+  p テキストの中に
+    span.br 装飾
+    | テキストの中にテキストの中にテキストの中に
 
 </body>
