@@ -1,0 +1,15 @@
+.visually-hidden {
+  position: absolute !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  // a11y-css-resetから引用
+  // https://github.com/mike-engel/a11y-css-reset
+  border: 0 !important;
+
+  clip-path: inset(50%) !important;
+}

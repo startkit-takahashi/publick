@@ -1,5 +1,0 @@
-@mixin mq($mediaquery: md) {
-  @media #{map-get($mediaquerys, $mediaquery)} {
-    @content;
-  }
-}

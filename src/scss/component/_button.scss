@@ -9,5 +9,13 @@
 }
 
 .header {
-  width: func.vw(30px);
+  width: func.vw(500px);
+
+  @include set.responsive(md) {
+    font-size: func.rem(20px);
+  }
+
+  &.-img {
+    @include set.object-fit(cover);
+  }
 }

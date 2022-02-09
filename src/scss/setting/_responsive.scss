@@ -1,5 +1,14 @@
-@mixin mq($mediaquery: md) {
-  @media #{map-get($mediaquerys, $mediaquery)} {
-    @content;
+@use 'breakpoints'as br;
+
+@mixin responsive($breakpoint) {
+  @if map-has-key(br.$breakpoints, $breakpoint) {
+    @media screen and #{inspect(map-get(br.$breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+
+  // マップ型で定義されていない値が呼び出された時はエラーを返す
+  @else {
+    @error '指定されたブレークポイントは定義されていません。'+'指定できるブレークポイントは次のとおりです。 -> #{map-keys($breakpoints)}';
   }
 }

@@ -1,12 +1,6 @@
-$breakpoints: (sm: 640,
-  md: 768,
-  lg: 1024,
-  xl: 1280,
-);
-
-$mediaquerys: (sm: 'screen and (min-width: #{map-get($breakpoints,\'sm\')}px)',
-  md: 'screen and (min-width: #{map-get($breakpoints,\'md\')}px)',
-  lg: 'screen and (min-width: #{map-get($breakpoints,\'lg\')}px)',
-  xl: 'screen snd (min-width: #{map-get($breakpoints,\'xl\')}px)',
-  ie: '(-ms-high-contrast: active), (-ms-high-contrast: none)',
-);
+$breakpoints: ('xs': (min-width: 0),
+  'sm': (min-width: 576px),
+  'md': (min-width: 768px),
+  'lg': (min-width: 992px),
+  'xl': (min-width: 1200px),
+  'xxl': (min-width: 1400px)) !default;
